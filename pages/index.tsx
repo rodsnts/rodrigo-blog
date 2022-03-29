@@ -11,7 +11,7 @@ const Home: NextPage = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 1800);
   }, []);
 
   return (

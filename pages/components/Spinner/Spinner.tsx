@@ -5,7 +5,7 @@ import * as S from "./style";
 const Spinner = () => {
   return (
     <S.Wraped>
-      <Barloader color={"#2bbc8a"} loading={true} />
+      <S.Loader></S.Loader>
     </S.Wraped>
   );
 };
