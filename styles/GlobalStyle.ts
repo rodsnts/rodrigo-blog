@@ -22,6 +22,30 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     max-height: 100vh;
   }
+
+  a {
+    margin: 0;
+    width: fit-content;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .body {
+    margin: 0 30.2rem;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+
+  @keyframes fadeIn {
+    from {
+      transform: translate(0, 3px);
+      opacity: 0;
+    }
+    to {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
 `;
 
 export default GlobalStyle;

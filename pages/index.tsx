@@ -3,6 +3,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Logo from "./components/Logo/Logo";
 import Spinner from "./components/Spinner/Spinner";
+import Gap from "./components/Gap/Gap";
 
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(true);
@@ -10,7 +11,7 @@ const Home: NextPage = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 2500);
+    }, 1800);
   }, []);
 
   return (
@@ -26,7 +27,14 @@ const Home: NextPage = () => {
           crossOrigin="anonymous"
         />
       </Head>
-      {loading ? <Spinner /> : <Logo title="Rodrigo Santos" />}
+      {loading ? (
+        <Spinner />
+      ) : (
+        <div className="body">
+          <Gap size={6.4} />
+          <Logo title="rodrigo." />
+        </div>
+      )}
     </>
   );
 };

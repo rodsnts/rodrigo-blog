@@ -12,6 +12,6 @@ export default {
 export const Default: Story<LogoProps> = (args) => <Logo {...args} />;
 
 Default.args = {
-  title: "Rodrigo Santos",
+  title: "rodrigo.",
   color: "dark",
 };
