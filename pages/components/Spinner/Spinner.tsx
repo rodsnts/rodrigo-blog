@@ -1,5 +1,4 @@
 import React from "react";
-import Barloader from "react-spinners/Barloader";
 import * as S from "./style";
 
 const Spinner = () => {
