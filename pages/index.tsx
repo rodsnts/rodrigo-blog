@@ -1,8 +1,18 @@
+import { useState, useEffect } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Logo from "./components/Logo/Logo";
+import Spinner from "./components/Spinner/Spinner";
 
 const Home: NextPage = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2500);
+  }, []);
+
   return (
     <>
       <Head>
@@ -16,7 +26,7 @@ const Home: NextPage = () => {
           crossOrigin="anonymous"
         />
       </Head>
-      <Logo title="Rodrigo Santos" />
+      {loading ? <Spinner /> : <Logo title="Rodrigo Santos" />}
     </>
   );
 };
