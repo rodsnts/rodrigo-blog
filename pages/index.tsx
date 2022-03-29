@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import Logo from "./components/Logo/Logo";
-import Spinner from "./components/Spinner/Spinner";
-import Gap from "./components/Gap/Gap";
+import Logo from "../src/components/Logo/Logo";
+import Spinner from "../src/components/Spinner/Spinner";
+import Gap from "../src/components/Gap/Gap";
 
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(true);
