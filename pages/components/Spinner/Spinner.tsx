@@ -1,5 +1,4 @@
 import React from "react";
-//@ts-ignore
 import Barloader from "react-spinners/Barloader";
 import * as S from "./style";
 
