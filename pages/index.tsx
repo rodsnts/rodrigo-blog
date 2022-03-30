@@ -33,7 +33,7 @@ const Home: NextPage = () => {
         <Spinner />
       ) : (
         <div className="body">
-          <Gap size={6} />
+          <Gap size={5} />
           <Logo title="rodrigo." />
           {/* <Image
             src="https://images.pexels.com/photos/8698152/pexels-photo-8698152.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=2048&w=2048"
@@ -44,11 +44,9 @@ const Home: NextPage = () => {
             }
             placeholder="blur"
           /> */}
-          <Gap size={1} />
           {db.posts.map((post: any) => (
             <PostList key={post.id} {...post} />
           ))}
-          =
         </div>
       )}
     </>
