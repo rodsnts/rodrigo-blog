@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import type { NextPage } from "next";
-import Image from "next/image";
 import Head from "next/head";
 import Logo from "../src/components/Logo/Logo";
 import Spinner from "../src/components/Spinner/Spinner";
 import Gap from "../src/components/Gap/Gap";
 import PostList from "../src/components/PostList/PostList";
+import db from "../db/post.json";
 
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(true);
@@ -44,11 +44,11 @@ const Home: NextPage = () => {
             }
             placeholder="blur"
           /> */}
-          <Gap size={3.4} />
-          <PostList
-            date="2022-03-30"
-            title="Hi, this is my first blog post 🙃"
-          />
+          <Gap size={1} />
+          {db.posts.map((post: any) => (
+            <PostList key={post.id} {...post} />
+          ))}
+          =
         </div>
       )}
     </>

@@ -12,9 +12,7 @@ const PostList = ({ date, title }: PostListProps) => {
   return (
     <S.PostListWrapper>
       <li>
-        <time dateTime={new Date(date).toISOString()} itemProp="datePublished">
-          {date}
-        </time>
+        <time itemProp="datePublished">{date}</time>
         <Link href={`/posts/${title}`}>
           <a>{title}</a>
         </Link>

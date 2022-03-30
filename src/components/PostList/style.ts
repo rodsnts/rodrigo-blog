@@ -7,6 +7,7 @@ export const PostListWrapper = styled.ul`
     color: #c9cacc;
     align-items: center;
     font-size: 1.4rem;
+    margin-top: 3rem;
   }
 
   time {
@@ -17,8 +18,7 @@ export const PostListWrapper = styled.ul`
 
   a {
     position: relative;
-    margin-bottom: 0.37rem;
-    margin-left: 30px;
+    margin-left: 3.5rem;
     height: fit-content;
     border-bottom: 2px solid #c9cacc;
   }
