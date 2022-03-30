@@ -10,6 +10,11 @@ const GlobalStyle = createGlobalStyle`
     font-display: swap;
   }
 
+  ::selection {
+    background: #2bbc8a;
+    color: #c9cacc;
+  }
+
   * {
     box-sizing: border-box;
   }
