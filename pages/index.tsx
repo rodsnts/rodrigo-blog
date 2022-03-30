@@ -5,6 +5,7 @@ import Head from "next/head";
 import Logo from "../src/components/Logo/Logo";
 import Spinner from "../src/components/Spinner/Spinner";
 import Gap from "../src/components/Gap/Gap";
+import PostList from "../src/components/PostList/PostList";
 
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(true);
@@ -18,7 +19,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Rodrigo Santos</title>
+        <title>rodrigo.</title>
         <meta name="description" content="Just my dev blog :)" />
         <link
           rel="preload"
@@ -32,7 +33,7 @@ const Home: NextPage = () => {
         <Spinner />
       ) : (
         <div className="body">
-          <Gap size={6.4} />
+          <Gap size={6} />
           <Logo title="rodrigo." />
           {/* <Image
             src="https://images.pexels.com/photos/8698152/pexels-photo-8698152.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=2048&w=2048"
@@ -43,6 +44,11 @@ const Home: NextPage = () => {
             }
             placeholder="blur"
           /> */}
+          <Gap size={3.4} />
+          <PostList
+            date="2022-03-30"
+            title="Hi, this is my first blog post 🙃"
+          />
         </div>
       )}
     </>

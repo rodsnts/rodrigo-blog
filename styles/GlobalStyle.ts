@@ -14,6 +14,11 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
   body, html {
     margin: 0;
     padding: 0;
@@ -24,6 +29,12 @@ const GlobalStyle = createGlobalStyle`
     font-family: "Menlo", sans-serif;
     font-size: 62.5%;
     height: 100vh;
+  }
+
+  body {
+    margin: auto;
+    padding: 0 3.2rem;
+    max-width: 76.8rem;
   }
 
   a {
