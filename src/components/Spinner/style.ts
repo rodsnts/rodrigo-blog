@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const Wraped = styled.div`
   display: grid;
-  height: 99vh;
+  height: 100vh;
   place-items: center;
 `;
 
 export const Loader = styled.div`
-  width: 300px;
+  width: 355px;
   height: 8px;
   background-color: #00000010;
   position: relative;
@@ -31,7 +31,7 @@ export const Loader = styled.div`
       width: 120px;
     }
     100% {
-      left: 310px;
+      left: 313px;
       width: 40px;
     }
   }

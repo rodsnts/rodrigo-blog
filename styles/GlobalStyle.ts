@@ -14,13 +14,16 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+
   html {
     background-color: #1d1f21;
     font-family: "Menlo", sans-serif;
     font-size: 62.5%;
-    margin: 0;
-    padding: 0;
-    max-height: 100vh;
+    height: 100vh;
   }
 
   a {
@@ -31,7 +34,10 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .body {
-    margin: 0 30.2rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
     animation: fadeIn 0.5s ease-in-out;
   }
 
