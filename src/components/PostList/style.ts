@@ -44,8 +44,12 @@ export const PostListWrapper = styled.ul`
       flex-direction: column;
     }
 
+    a {
+      align-self: start;
+    }
+
     time {
-      margin-left: 3.7rem;
+      margin-left: 3.3rem;
       align-self: flex-start;
     }
   }

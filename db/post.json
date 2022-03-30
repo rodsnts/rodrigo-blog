@@ -2,7 +2,7 @@
   "posts": [
     {
       "id": 1,
-      "title": "How I wrote this fast blog with Next.js",
+      "title": "How I wrote this blog with Next.js",
       "date": "2022-30-03"
     },
     {
