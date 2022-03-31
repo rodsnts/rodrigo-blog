@@ -1,14 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Logo from "../src/components/Logo/Logo";
 import Spinner from "../src/components/Spinner/Spinner";
 import Gap from "../src/components/Gap/Gap";
 import PostList from "../src/components/PostList/PostList";
-import db from "../db/post.json";
+import PostContext from "../src/context/PostContext";
 
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(true);
+  const { posts } = useContext<any>(PostContext);
 
   useEffect(() => {
     setTimeout(() => {
@@ -35,17 +36,8 @@ const Home: NextPage = () => {
         <div className="body">
           <Gap size={5} />
           <Logo title="rodrigo." />
-          {/* <Image
-            src="https://images.pexels.com/photos/8698152/pexels-photo-8698152.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=2048&w=2048"
-            alt="photo"
-            layout="fill"
-            blurDataURL={
-              "https://images.pexels.com/photos/8698152/pexels-photo-8698152.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=5&w=940"
-            }
-            placeholder="blur"
-          /> */}
-          {db.posts.map((post: any) => (
-            <PostList key={post.id} {...post} />
+          {posts.map((post: any) => (
+            <PostList key={post.id} {...post.attributes} />
           ))}
         </div>
       )}

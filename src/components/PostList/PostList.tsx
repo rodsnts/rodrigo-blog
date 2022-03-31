@@ -14,7 +14,7 @@ const PostList = ({ date, title, slug }: PostListProps) => {
     <S.PostListWrapper>
       <li>
         <time itemProp="datePublished">{date}</time>
-        <Link href={`/posts/${slug}`}>
+        <Link href={`/posts/${slug}`} as={`/posts/${slug}`}>
           <a>{title}</a>
         </Link>
       </li>
