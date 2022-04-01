@@ -29,9 +29,11 @@ const Home: NextPage = () => {
         <div className="body">
           <Gap size={5} />
           <Logo title="rodrigo." />
-          {posts.map((post: any) => (
-            <PostList key={post.id} {...post.attributes} />
-          ))}
+          <div className="content">
+            {posts.map((post: any) => (
+              <PostList key={post.id} {...post.attributes} />
+            ))}
+          </div>
         </div>
       )}
     </>

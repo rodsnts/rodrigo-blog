@@ -7,7 +7,7 @@ export const PostListWrapper = styled.ul`
     color: #c9cacc;
     align-items: center;
     font-size: 1.4rem;
-    margin-top: 3rem;
+    margin-top: 3.5rem;
   }
 
   time {

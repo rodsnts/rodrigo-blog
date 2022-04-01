@@ -57,6 +57,11 @@ const GlobalStyle = createGlobalStyle`
     animation: fadeIn 0.5s ease-in-out;
   }
 
+  .content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
 
   @keyframes fadeIn {
     from {

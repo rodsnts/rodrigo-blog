@@ -5,15 +5,15 @@ import * as S from "./style";
 
 type PostListProps = {
   slug: string;
-  date: string;
+  datePosted: string;
   title: string;
 };
 
-const PostList = ({ date, title, slug }: PostListProps) => {
+const PostList = ({ datePosted, title, slug }: PostListProps) => {
   return (
     <S.PostListWrapper>
       <li>
-        <time itemProp="datePublished">{date}</time>
+        <time itemProp="datePublished">{datePosted}</time>
         <Link href={`/posts/${slug}`} as={`/posts/${slug}`}>
           <a>{title}</a>
         </Link>
