@@ -18,7 +18,7 @@ export const PostProvider = ({ children }: PostProviderProps) => {
   const [posts, setPosts] = useState<any>([]);
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/posts`, {
+    fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}api/posts`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`,
