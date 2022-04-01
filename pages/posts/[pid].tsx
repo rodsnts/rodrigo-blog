@@ -1,10 +1,11 @@
 import React from "react";
+import ReactMarkdown from "react-markdown";
 
 export default function Post({ post }: any) {
   console.log(post);
   return (
     <div>
-      <h1>{post.content}</h1>
+      <ReactMarkdown>{post.content}</ReactMarkdown>
     </div>
   );
 }
@@ -30,9 +31,15 @@ export async function getServerSideProps(context: ContextProps) {
 
   const post = await response.json();
 
+  if (!post.data) {
+    return {
+      notFound: true,
+    };
+  }
+
   return {
     props: {
-      post: post?.data.attributes,
+      post: post.data.attributes,
     },
   };
 }
