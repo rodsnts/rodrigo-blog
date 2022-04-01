@@ -1,18 +1,22 @@
-import { useRouter } from "next/router";
+import React from "react";
 
 export default function Post({ post }: any) {
   console.log(post);
   return (
     <div>
-      <h1>{post}</h1>
+      <h1>{post.content}</h1>
     </div>
   );
 }
 
-export async function postProps() {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const router = useRouter();
-  const { pid } = router.query;
+type ContextProps = {
+  query: {
+    pid: string;
+  };
+};
+
+export async function getServerSideProps(context: ContextProps) {
+  const { pid } = context.query;
 
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_API_ENDPOINT}/posts/${pid}`,
@@ -24,11 +28,11 @@ export async function postProps() {
     }
   );
 
-  console.log(response, "response");
+  const post = await response.json();
 
   return {
     props: {
-      post: response,
+      post: post?.data.attributes,
     },
   };
 }

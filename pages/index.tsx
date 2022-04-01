@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useContext } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Logo from "../src/components/Logo/Logo";
@@ -8,14 +8,7 @@ import PostList from "../src/components/PostList/PostList";
 import PostContext from "../src/context/PostContext";
 
 const Home: NextPage = () => {
-  const [loading, setLoading] = useState(true);
-  const { posts } = useContext<any>(PostContext);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-  }, []);
+  const { posts, loading } = useContext<any>(PostContext);
 
   return (
     <>

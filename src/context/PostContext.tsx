@@ -6,6 +6,7 @@ type PostProviderProps = {
 
 const initialState = {
   posts: [],
+  loading: true,
 };
 
 type AppState = typeof initialState;
@@ -13,6 +14,7 @@ type AppState = typeof initialState;
 const PostContext = createContext<AppState>(initialState);
 
 export const PostProvider = ({ children }: PostProviderProps) => {
+  const [loading, setLoading] = useState<any>(true);
   const [posts, setPosts] = useState<any>([]);
 
   useEffect(() => {
@@ -25,11 +27,14 @@ export const PostProvider = ({ children }: PostProviderProps) => {
       .then((response) => response.json())
       .then((data) => {
         setPosts(data.data);
+        setLoading(false);
       });
   }, []);
 
   return (
-    <PostContext.Provider value={{ posts }}>{children}</PostContext.Provider>
+    <PostContext.Provider value={{ posts, loading }}>
+      {children}
+    </PostContext.Provider>
   );
 };
 
