@@ -1,7 +1,6 @@
 import { useContext } from "react";
 
 import type { NextPage } from "next";
-import Head from "next/head";
 
 import Logo from "../src/components/Logo/Logo";
 import Spinner from "../src/components/Spinner/Spinner";

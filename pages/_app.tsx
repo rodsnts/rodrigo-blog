@@ -8,7 +8,6 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyle } from "../styles/themes";
 
 import { PostProvider } from "../src/context/PostContext";
-import Script from "next/script";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useState("dark");
