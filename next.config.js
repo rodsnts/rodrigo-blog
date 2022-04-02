@@ -8,7 +8,7 @@ const nextConfig = {
     BASE_URL: process.env.BASE_URL,
   },
   images: {
-    domains: ["images.pexels.com", "localhost"],
+    domains: ["api.rsantos.dev", "localhost"],
   },
 };
 
