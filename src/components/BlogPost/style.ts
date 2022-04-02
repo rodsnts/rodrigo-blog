@@ -67,6 +67,13 @@ export const PostListWrapper = styled.div`
     padding: 1rem;
   }
 
+  blockquote {
+    margin-left: 0;
+    border-left: 0.5rem solid #2bbc8a;
+    text-indent: 2rem;
+    font-style: italic;
+  }
+
   code::selection {
     background-color: #c9cacc;
     color: black;
