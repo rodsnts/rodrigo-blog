@@ -75,11 +75,6 @@ export const PostListWrapper = styled.div`
     text-indent: 2rem;
     font-style: italic;
   }
-
-  code::selection {
-    background-color: #c9cacc;
-    color: black;
-  }
 `;
 
 export const PostInfo = styled.div`

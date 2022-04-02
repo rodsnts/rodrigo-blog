@@ -1,6 +1,16 @@
 import { createGlobalStyle } from "styled-components";
 
-const GlobalStyle = createGlobalStyle`
+export const lightTheme = {
+  body: "#fff",
+  fontColor: "#1d1f21",
+};
+
+export const darkTheme = {
+  body: "#1d1f21",
+  fontColor: "#c9cacc",
+};
+
+export const GlobalStyle = createGlobalStyle`
 
   @font-face {
     font-family: "Menlo";
@@ -30,12 +40,18 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    background-color: #1d1f21;
+    background-color: ${(props: any) => props.theme.body};
     font-family: "Menlo", sans-serif;
     font-size: 62.5%;
     height: 100vh;
   }
 
+  p,
+  h2,
+  a {
+    color: ${(props: any) => props.theme.fontColor} !important;
+  }
+  
   body {
     margin: auto;
     padding: 0 3.2rem;

@@ -1,6 +1,8 @@
 import { useContext } from "react";
+
 import type { NextPage } from "next";
 import Head from "next/head";
+
 import Logo from "../src/components/Logo/Logo";
 import Spinner from "../src/components/Spinner/Spinner";
 import Gap from "../src/components/Gap/Gap";
@@ -12,17 +14,6 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Head>
-        <title>rodrigo.</title>
-        <meta name="description" content="Just my dev blog :)" />
-        <link
-          rel="preload"
-          href="/fonts/Menlo-Regular.woff"
-          as="font"
-          type="font/woff"
-          crossOrigin="anonymous"
-        />
-      </Head>
       {loading ? (
         <Spinner />
       ) : (
