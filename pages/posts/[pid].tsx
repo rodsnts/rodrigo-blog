@@ -1,12 +1,13 @@
 import React from "react";
-import ReactMarkdown from "react-markdown";
+import BlogPost from "../../src/components/BlogPost/BlogPost";
+import Gap from "../../src/components/Gap/Gap";
 
 export default function Post({ post }: any) {
-  console.log(post);
   return (
-    <div>
-      <ReactMarkdown>{post.content}</ReactMarkdown>
-    </div>
+    <>
+      <Gap size={5} />
+      <BlogPost post={post} />
+    </>
   );
 }
 
