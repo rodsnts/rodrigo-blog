@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>rodrigo.</title>
+        <title>rodrigo - blog</title>
         <meta name="description" content="Just my dev blog :)" />
         <link
           rel="preload"
