@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const PostListWrapper = styled.div`
+  display: block;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -57,14 +58,12 @@ export const PostListWrapper = styled.div`
   }
 
   code {
+    font-size: 1.4rem;
+  }
+
+  pre div {
     border-radius: 5px;
-    background-color: #2bbc8a;
-    color: white;
-    display: block;
-    font-family: Menlo, monospace;
-    font-size: 1.2rem;
-    font-weight: 100;
-    padding: 1rem;
+    padding: 1.5rem;
   }
 
   blockquote {
