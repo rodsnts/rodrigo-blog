@@ -10,6 +10,7 @@ export const PostListWrapper = styled.div`
   h2 {
     text-transform: capitalize;
     font-size: 1.6rem;
+    word-spacing: 0rem;
     font-weight: bolder;
   }
 
@@ -24,6 +25,8 @@ export const PostListWrapper = styled.div`
     text-align: justify;
     font-size: 1.4rem;
     line-height: 2.4rem;
+    word-spacing: 0rem;
+    letter-spacing: 0.1rem;
   }
 
   a {
@@ -85,6 +88,7 @@ export const PostInfo = styled.div`
 `;
 
 export const Title = styled.h1`
+  word-spacing: 0rem;
   margin-bottom: 0;
   font-size: 2.1rem;
   color: #2bbc8a;

@@ -12,16 +12,14 @@ export default function Post({ post }: any) {
 }
 
 type ContextProps = {
-  query: {
+  params: {
     pid: string;
   };
 };
 
-export async function getServerSideProps(context: ContextProps) {
-  const { pid } = context.query;
-
+export async function getStaticProps({ params }: ContextProps) {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_ENDPOINT}/posts/${pid}`,
+    `${process.env.NEXT_PUBLIC_API_ENDPOINT}/posts/${params.pid}`,
     {
       method: "GET",
       headers: {
@@ -32,15 +30,31 @@ export async function getServerSideProps(context: ContextProps) {
 
   const post = await response.json();
 
-  if (!post.data) {
-    return {
-      notFound: true,
-    };
-  }
-
   return {
     props: {
       post: post.data.attributes,
     },
+  };
+}
+
+export async function getStaticPaths() {
+  const posts = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/posts`, {
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`,
+    },
+  });
+
+  const postsList = await posts.json();
+
+  const paths = postsList.data.map((post: any) => ({
+    params: {
+      pid: post.attributes.slug,
+    },
+  }));
+
+  return {
+    paths,
+    fallback: false,
   };
 }
