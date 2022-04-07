@@ -8,7 +8,6 @@ export const PostListWrapper = styled.div`
   color: #c9cacc;
 
   h2 {
-    text-transform: capitalize;
     font-size: 1.6rem;
     word-spacing: -0.5rem;
     font-weight: bolder;
