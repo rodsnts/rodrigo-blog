@@ -9,7 +9,7 @@ import PostList from "../src/components/PostList/PostList";
 import PostContext from "../src/context/PostContext";
 
 const Home: NextPage = () => {
-  const { posts, loading } = useContext<any>(PostContext);
+  const { posts, loading } = useContext(PostContext);
 
   return (
     <>

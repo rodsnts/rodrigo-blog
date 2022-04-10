@@ -1,7 +1,7 @@
 import React from "react";
 
 type GapProps = {
-  size: any;
+  size: number;
 };
 
 const Gap = ({ size }: GapProps) => {
