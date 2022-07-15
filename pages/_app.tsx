@@ -8,6 +8,7 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyle } from "../styles/themes";
 
 import { PostProvider } from "../src/context/PostContext";
+import DevTools from "../src/components/DevTools/DevTools";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useState("dark");
@@ -40,6 +41,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           stopDelayMs={200}
           height={3}
         />
+        <DevTools />
       </ThemeProvider>
     </>
   );
