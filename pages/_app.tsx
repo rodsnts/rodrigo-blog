@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import type { AppProps } from "next/app";
 import Head from "next/head";
@@ -12,10 +12,15 @@ import DevTools from "../src/components/DevTools/DevTools";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useState("dark");
+  const [isDev, setIsDev] = useState(false);
 
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
+
+  useEffect(() => {
+    window.location.href.includes("localhost") && setIsDev(true);
+  }, []);
 
   return (
     <>
@@ -41,7 +46,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           stopDelayMs={200}
           height={3}
         />
-        <DevTools />
+        {isDev && <DevTools />}
       </ThemeProvider>
     </>
   );
