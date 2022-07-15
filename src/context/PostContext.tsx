@@ -29,6 +29,7 @@ export const PostProvider = ({ children }: PostProviderProps) => {
     // })
     //   .then((response) => response.json())
     //   .then((data) => {
+    //     console.log(data);
     //     setPosts(data.data);
     //     setLoading(false);
     //   });
